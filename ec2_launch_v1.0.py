@@ -16,7 +16,7 @@ key_name = 'xxxxx-test-20141218'
 block_device_map = BlockDeviceMapping()
 block_dev_type = BlockDeviceType(delete_on_termination=True, size=100)
 block_device_map['/dev/sda1'] = block_dev_type
-user_data = "sudo apt-get -y htop"
+user_data = "sudo apt-get -y install htop"
 
 networks = NetworkInterfaceSpecification(
     subnet_id = subnet_id, 
