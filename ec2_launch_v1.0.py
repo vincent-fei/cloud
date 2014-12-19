@@ -46,7 +46,7 @@ eip = allocate_address.public_ip
 allocation_id = allocate_address.allocation_id
 
 ## get instance information
-print "Instance is launching, Please wait..."
+print "Instance is launching, Please wait... "
 time_init = 0
 time_total = 300
 time_interval = 5       
