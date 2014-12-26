@@ -6,7 +6,7 @@ import boto.route53
 import os
 
 def add_record_to_zone(domain_name,type,sub_domain,value,ttl=300):
-    ## check input ends with dot or not
+    ## check domain_name ends with dot or not
     input = domain_name
     if input.endswith('.'):
         hosted_zone_name = input
@@ -73,7 +73,7 @@ def export_zone_to_file(domain_name,type,sub_domain):
 
 def main():
     # useage demos
-    #export_zone_to_file('wall-et.net')
+    #export_zone_to_file('imbusy.me')
     #add_record_to_zone('cypay.internal','A','www','10.0.1.175')
     #add_record_to_zone('cypay.internal','CNAME','web','www.cypay.internal')
     #delete_record_from_zone('cypay.internal','A','www')
