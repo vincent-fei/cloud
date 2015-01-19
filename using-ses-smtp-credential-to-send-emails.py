@@ -48,3 +48,12 @@ if __name__ == "__main__":
     subject = "puts your email subject here!"
     body_text = "puts your email content here!"
     send_email(subject, body_text, emails, cc_emails, bcc_emails)
+    
+'''config file looks as follow, username and password get from SMTP credentials:
+server = email-smtp.us-east-1.amazonaws.com
+from_addr = sender@domain.com
+username = AKIxxx
+password = Aqbxxxxxxxxxxxxxxxxxx
+'''
+
+
