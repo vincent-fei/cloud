@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 ## wangfei@cyou-inc.com 
-import boto.ec2
+import boto
 import sys, os
 
 distribution_id = 'xxxxxxx'
