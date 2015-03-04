@@ -37,7 +37,7 @@ for i in range(chunk_count + 1):
         mp.upload_part_from_file(fp, part_num=i + 1)
 mp.complete_upload()
 
-b.set_acl('public-read', object_name)
+b.set_acl('public-read', object_key)
 object_download_url = "http://" + bucket_name + ".s3.amazonaws.com/" + object_key
 print "Public Download url is :"
 print object_download_url
