@@ -39,5 +39,8 @@ mp.complete_upload()
 
 b.set_acl('public-read', object_key)
 object_download_url = "http://" + bucket_name + ".s3.amazonaws.com/" + object_key
+object_torrent_url = object_download_url + "?torrent"
 print "Public Download url is :"
 print object_download_url
+print "Public Torrent url is :"
+print object_torrent_url
