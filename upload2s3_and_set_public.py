@@ -7,13 +7,15 @@ source_path = r"Z:\test.zip"
 object_name = os.path.basename(source_path)
 source_size = os.stat(source_path).st_size
 bucket_name = 'your-bucket-name'
+bucket_dir = 'upload'
+object_key = bucket_dir + "/" + object_name
 
 # Connect to S3
 c = boto.connect_s3()
 b = c.get_bucket(bucket_name)
 
 # Create a multipart upload request
-mp = b.initiate_multipart_upload(object_name)
+mp = b.initiate_multipart_upload(object_key)
 
 # Use a chunk size of 10 MiB (feel free to change this)
 chunk_size = 10485760
