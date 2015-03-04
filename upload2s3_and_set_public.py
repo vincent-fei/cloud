@@ -21,14 +21,14 @@ mp = b.initiate_multipart_upload(object_key)
 chunk_size = 10485760
 chunk_count = int(math.ceil(source_size / float(chunk_size)))
 
+print "object_key:\t" + "S3://" + bucket_name + "/" + object_key
 print "source_path:\t", source_path
-print "object_key:\t", object_key
 print "source_size:\t", source_size
 print "chunk_size:\t", chunk_size
 print "chunk_count:\t", chunk_count
 print "Begin to multi-part upload"
 
-for i in range(chunk_count + 1):
+for i in range(chunk_count):
     offset = chunk_size * i
     bytes = min(chunk_size, source_size - offset)
     with FileChunkIO(source_path, 'r', offset=offset,
