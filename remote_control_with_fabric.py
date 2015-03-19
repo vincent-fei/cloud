@@ -2,6 +2,7 @@
 from fabric.api import *
 
 env.user = "username"
+env.gateway = "54.xx.xx.xx"
 env.password = "password"
 env.roledefs = {
     'webpay' : ['10.0.0.x','10.0.1.x'],
