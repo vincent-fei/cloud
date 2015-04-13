@@ -19,7 +19,7 @@ block_device_map['/dev/sdg'] = xvdg
 # then you can use block_device_map in run_instance
 conn = boto.ec2.connect_to_region(ec2_region)
 conn.run_instances(
-    ......
+    # other arguments
     block_device_map=block_device_map,
-    ......
+    # other arguments
     )
